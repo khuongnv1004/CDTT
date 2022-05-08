@@ -78,7 +78,6 @@ const DashBoardAdmin = ({ type = "TS" }) => {
                         <div className="dashboard-amount">
                           <div className="amount-content">
                             <i className="flaticon-050-credit-card-2" />
-                         
                           </div>
                         </div>
                       </div>

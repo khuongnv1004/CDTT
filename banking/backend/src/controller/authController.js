@@ -102,7 +102,7 @@ const login = async (req, res) => {
             .json(
               statusResponse.createResponse(
                 statusResponse.FAILED,
-                "Tai khoan or password khong dung"
+                "Tài khoản hoặc mật khẩu không đúng!"
               )
             );
         }
@@ -112,7 +112,7 @@ const login = async (req, res) => {
           .json(
             statusResponse.createResponse(
               statusResponse.FAILED,
-              "Tai khoan or password khong dung"
+              "Tài khoản hoặc mật khẩu không đúng!"
             )
           );
       }

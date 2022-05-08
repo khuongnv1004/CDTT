@@ -160,7 +160,9 @@ const receiveSaving = async (req, res) => {
     const typeRate = checkType(saving.typeRate); // ky han gui thang
     const checkDate = getDate(saving.date); // return so thang
 
-    let money = validateDate(checkDate, typeRate, moneySend);
+    let money = parseInt(moneySend) + validateDate(checkDate, typeRate, moneySend);
+
+    console.log(money);
 
     await db.Transaction.create({
       idSend: 123,
@@ -301,10 +303,10 @@ const validateDate = (checkDate, typeRate, moneySend) => {
   let money = 0;
   if (checkDate >= typeRate && typeRate == 12) {
     // dung ky han
-    money = moneySend + 0.023 * moneySend;
-  } else if (checkDate >= typeRate && typeRate == 12) {
+    money =  0.026 * moneySend;
+  } else if (checkDate >= typeRate && typeRate == 6) {
     // dung ky han
-    money = moneySend + 0.02 * moneySend;
+    money =  0.02 * moneySend;
   }else {
     money = moneySend;
   }
@@ -360,6 +362,7 @@ const chartSaving = async (req, res) => {
     }
      listDate.reverse();
      listD.reverse();
+     console.log(listDate);
     let arr = [
       {
         label: "Số Tiền Giao Dịch",
@@ -430,6 +433,7 @@ const chartSaving = async (req, res) => {
     });
     arr[0].data.push(money7);
     //7
+    // console.log(data);
 
     return res.status(200).json(
       statusResponse.createResponse(statusResponse.SUCCESS, {

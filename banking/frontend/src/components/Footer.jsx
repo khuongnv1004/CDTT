@@ -28,7 +28,7 @@ const Footer = () => {
                         type="email"
                         className="email form-control width-80"
                         id="sus_email"
-                        placeholder="Email"
+                        placeholder="Type Email"
                       />
                       <button type="submit" id="sus_submit" className="add-btn">
                         Subscribe

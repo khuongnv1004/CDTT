@@ -32,6 +32,11 @@ const Content = () => {
   }, [user]);
   const handleClearInput = () =>{
     setData(initialState);
+    setUserReceive({
+      ...userReceive,
+      fullName: " ",
+    });
+    
     
   }
 const dispatch = useDispatch()
@@ -135,7 +140,7 @@ const dispatch = useDispatch()
                           <CurrencyInput
                             id="input-example"
                             name="moneySend"
-                            placeholder="Please enter a number"
+                            placeholder="Nhập số tiền"
                             decimalsLimit={2}
                             min="0"
                             prefix={"VND   "}

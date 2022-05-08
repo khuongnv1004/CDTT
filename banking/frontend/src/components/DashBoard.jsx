@@ -138,7 +138,7 @@ const DashBoard = ({ type = "S1" }) => {
                   <div className="support-inner">
                     <div className="help-support">
                       <i className="flaticon-107-speech-bubbles" />
-                      <a href="contact.html">
+                      <a href="https://www.facebook.com/khuongnv104/">
                         <span className="help-text">Bạn cần hỗ trợ ?</span>
                       </a>
                     </div>
