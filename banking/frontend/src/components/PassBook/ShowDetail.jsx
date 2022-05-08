@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getSaving } from "../../store/action/transaction";
 import { recieveSaving } from "../../store/action/user";
 import moment from "moment";
+import { fCurrency } from "../../utilities/formatCost";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -71,7 +72,7 @@ const ShowDetail = () => {
                 <div className="curency-text">
                   <span className="c-country">Số tiền gửi</span>
                   <span className="c-money">
-                    {detail && detail.moneySaving} VNĐ
+                    {detail && fCurrency(Number(detail.moneySaving))} VNĐ
                   </span>
                 </div>
               </div>
