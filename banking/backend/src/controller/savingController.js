@@ -160,7 +160,7 @@ const receiveSaving = async (req, res) => {
     const typeRate = checkType(saving.typeRate); // ky han gui thang
     const checkDate = getDate(saving.date); // return so thang
 
-    let money = parseInt(moneySend) + validateDate(checkDate, typeRate, moneySend);
+    let money = parseInt(moneySend) + parseInt(validateDate(checkDate, typeRate, moneySend));
 
     console.log(money);
 
@@ -308,7 +308,7 @@ const validateDate = (checkDate, typeRate, moneySend) => {
     // dung ky han
     money =  0.02 * moneySend;
   }else {
-    money = moneySend;
+    money = 0;
   }
   return money;
 };
