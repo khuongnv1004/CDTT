@@ -66,6 +66,9 @@ const index = () => {
                                   : item.type == "CK" &&
                                     item.idReceive == card.CreditCard.numberCard
                                   ? "+ "
+                                  : item.type == "RTK" &&
+                                    item.idReceive == card.CreditCard.numberCard
+                                  ? "+ "
                                   : "- "}
                                 {item.moneySend} VNĐ
                               </td>

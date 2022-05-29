@@ -87,7 +87,7 @@ const Register = () => {
       toast.error('Khách hàng đã tồn tại hoặc số tài khoản đã tồn tại!')
       return false;
     }
-    toast.success('Đăng ký thành công!');
+    // toast.success('Đăng ký thành công!');
     return true;
   };
   const fetchData = async () => {

@@ -70,7 +70,7 @@ const DetailUsers = () => {
                           <label htmlFor="textmsde">Giới Tính</label>
                           <input
                             disabled
-                            value={user.sex === "MALE" ? "Nam" : "Nữ"}
+                            value={user.sex === "nam" ? "Nam" : "Nữ"}
                             rows={4}
                           />
                         </div>

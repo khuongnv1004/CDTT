@@ -32,7 +32,7 @@ const sendSaving = async (req, res) => {
             .json(
               statusResponse.createResponse(
                 statusResponse.FAILED,
-                "not enough to make money"
+                "Không đủ tiền"
               )
             );
         }
@@ -164,21 +164,21 @@ const receiveSaving = async (req, res) => {
 
     console.log(money);
 
+    let cre = await db.CreditCard.findOne({
+      where: {
+        userId: id,
+      },
+    });
+
     await db.Transaction.create({
       idSend: 123,
-      idReceive: req.body.stkReceive,
+      idReceive: cre.numberCard,
       moneySend: money,
       moneyRest: 0,
       description: "Rut Tien Tiet Kiem",
       type: "RTK",
       transactionPee: 0,
       date: req.body.date,
-    });
-
-    let cre = await db.CreditCard.findOne({
-      where: {
-        userId: id,
-      },
     });
 
     await db.CreditCard.update(
